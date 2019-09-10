@@ -15,3 +15,6 @@ DB = ActiveRecord::Base.establish_connection({
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+# suppress raw SQL output
+ActiveRecord::Base.logger = nil
